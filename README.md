@@ -8,8 +8,8 @@ Portafolio personal construido con **React** (Create React App), **React Router*
 
 ## 🚀 Demo
 
-- Sitio: **[URL de producción]**
-- Repo: **[URL del repositorio]**
+- Sitio: **[https://portfolio-dun-seven-zlz1oogsgp.vercel.app/]**
+- Repo: **[https://github.com/nm1davi/Portfolio]**
 
 ---
 
