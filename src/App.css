@@ -1,0 +1,3087 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #272727;
+}
+
+:root {
+    --nav-h: 72px;
+}
+
+/* valor inicial (no cambia tamaños) */
+
+/* si usás <section id="..."> o cualquier contenedor con id */
+section[id] {
+    scroll-margin-top: calc(var(--nav-h) + 60px);
+    /* pequeño respiro */
+}
+
+.contenedor-app {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.25);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.links-container ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.links-container li {
+    list-style: none;
+}
+
+.name {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.links a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.about-container {
+    margin-top: 9rem;
+}
+
+.text-about {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    font-size: 3.7rem;
+    letter-spacing: 3px;
+
+    /* Gradiente en el texto */
+    background: linear-gradient(140deg,
+            rgba(4, 217, 43, 1) 0%,
+            rgba(0, 228, 232, 1) 65%,
+            rgb(0, 200, 255) 87%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.about-container-biography {
+    margin-top: 4.5rem;
+    display: flex;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    width: 80%;
+}
+
+.biography-image {
+    /* tamaño del círculo */
+    width: 190px;
+    /* ajustá a gusto */
+    aspect-ratio: 1 / 1;
+    padding: 9px;
+    /* grosor del anillo */
+    border-radius: 50%;
+    display: inline-block;
+    /* anillo con gradiente (circular) */
+    background: conic-gradient(rgba(4, 217, 43, 1) 0%,
+            rgba(0, 228, 232, 1) 65%,
+            rgb(0, 200, 255) 87%,
+            rgba(4, 217, 43, 1) 100%
+            /* cierra el círculo */
+        );
+}
+
+.image-emogi {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #272727;
+}
+
+.biography-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 1.6rem;
+    height: 100%;
+}
+
+.biography-text h2,
+.biography-networks h2,
+.what-i-do h2,
+.technologies-container-text h2,
+.proyect-container-text h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.bio,
+.what-i-do-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.hl-green {
+    color: #04d92b;
+    font-weight: 700;
+}
+
+.hl-green1 {
+    color: #04d92bc6;
+    font-weight: 700;
+}
+
+.hl-green2 {
+    color: #6af7a2;
+    font-weight: 700;
+}
+
+.hl-cyan {
+    color: #00e4e8;
+    font-weight: 700;
+}
+
+.hl-red {
+    color: #ff0000c6;
+    font-weight: 700;
+}
+
+.hl-blue {
+    color: #00bfffc6;
+    font-weight: 700;
+}
+
+.biography-networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.6rem;
+}
+
+.networks-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+/* NETWORKS */
+
+/* From Uiverse.io by javierBarroso */
+.social-login-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+}
+
+.social-login-icons svg {
+    width: 20px;
+}
+
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px 0 0px 0;
+    cursor: pointer;
+}
+
+.icon svg {
+    fill: white;
+}
+
+.socialcontainer {
+    height: 80px;
+    overflow: hidden;
+}
+
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+}
+
+.social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(72.44deg,
+            #ff7a00 11.92%,
+            #ff0169 51.56%,
+            #d300c5 85.69%);
+}
+
+.socialcontainer:hover .social-icon-2 {
+    transform: translateY(-70px);
+}
+
+.social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+    transform: translateY(-70px);
+}
+
+.social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+
+    background: linear-gradient(180deg,
+            rgba(129, 34, 144, 1) 0%,
+            rgba(77, 34, 124, 1) 91%);
+}
+
+.socialcontainer:hover .social-icon-4 {
+    transform: translateY(-70px);
+}
+
+.what-i-do {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.what-i-do-main {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.what-i-do-skills {
+    display: flex;
+    gap: 2rem;
+}
+
+.skill-card {
+    border-radius: 19px;
+    padding: 1rem;
+    background-color: #323443;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* círculo con anillo en gradiente */
+.card-icon {
+    width: 56px;
+    height: 56px;
+    padding: 4px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: conic-gradient(rgba(4, 217, 43, 1) 0%,
+            rgba(0, 228, 232, 1) 65%,
+            rgb(0, 200, 255) 87%,
+            rgba(4, 217, 43, 1) 100%);
+}
+
+/* centro oscuro + aro fino interior */
+.card-icon>.bi {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #323443;
+    color: #fff;
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+/* alinear icono + texto del header */
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.skill-card-body p {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.technologies-container {
+    margin-top: 3rem;
+}
+
+.technologies-container-icons {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem 0.75rem;
+    width: 50%;
+    background: #323443a8;
+    padding: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    border-radius: 19px;
+    box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+}
+
+.technologies-container-icons svg {
+    margin: 0.7rem;
+}
+
+.proyects-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyects-container-cards {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.proyect-card {
+    margin-top: 1rem;
+    width: 40%;
+    padding: 1.2rem;
+    background-color: #2e303e;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.proyect-card-link {
+    display: flex;
+    justify-content: end;
+}
+
+.proyect-card-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    background-color: #3f4152;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.proyect-card-skills {
+    margin-left: 4px;
+}
+
+.skill-icon {
+    display: flex;
+    gap: 0.6rem;
+    width: max-content;
+    margin-left: 4px;
+}
+
+.proyect-card-skills svg {
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.proyect-card-info {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.title-info {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    font-size: 2.7rem;
+}
+
+.description-proyect {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.8rem;
+}
+
+.proyect-card-button {
+    margin-top: 3rem;
+    width: max-content;
+}
+
+/* From Uiverse.io by neerajbaniwal */
+.btn-shine {
+    padding: 9px 25px;
+    color: #fff;
+    background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-size: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+@-moz-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 180px;
+    }
+
+    100% {
+        background-position: 180px;
+    }
+}
+
+@-webkit-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 180px;
+    }
+
+    100% {
+        background-position: 180px;
+    }
+}
+
+@-o-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 180px;
+    }
+
+    100% {
+        background-position: 180px;
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 180px;
+    }
+
+    100% {
+        background-position: 180px;
+    }
+}
+
+.footer-container {
+    margin-top: 2.7rem;
+    display: flex;
+    justify-content: center;
+    border-top: 0.1px solid rgba(255, 255, 255, 0.25);
+}
+
+.text-footer-container {
+    padding: 0.7rem;
+}
+
+.text-footer-container h3 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.518);
+}
+
+.proyect-detail-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.proyect-detail-text h1 {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+
+.proyect-detail-text {
+    text-align: center;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.25);
+}
+
+.proyect-detail-info {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+}
+
+.proyect-image {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cotizador {
+    gap: 2rem;
+}
+
+.proyect-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.proyect-detail-info-problem-impact-solution {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.proyect-detail-problem,
+.proyect-detail-solution,
+.proyect-detail-impact {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-version {
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.25);
+}
+
+.version-title {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.proyect-detail-problem-title h2,
+.proyect-detail-solution-title h2,
+.proyect-detail-impact-title h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.proyect-detail-problem-title,
+.proyect-detail-solution-title,
+.proyect-detail-impact-title {
+    width: max-content;
+    padding-bottom: 0.3rem;
+}
+
+.proyect-detail-info-problem-impact-solution ul {
+    list-style: none;
+    padding: 0;
+}
+
+.proyect-detail-info-problem-impact-solution li {
+    padding-bottom: 0.3rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+    margin-top: 0.5rem;
+}
+
+.proyect-detail-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.repositorio-privado {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    color: white;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.barber .btn-shine,
+.barber p {
+    font-size: 0.8rem;
+}
+
+.barber-img {
+    gap: 1.5rem;
+}
+
+.portfolio-img {
+    gap: 1.5rem;
+}
+
+.not-found {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.notFound-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30%;
+    background: #323443a8;
+    padding: 5rem;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(22, 232, 204, 0.48);
+    margin: 0 auto;
+}
+
+.not-found-title {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    font-family: "Gabarito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+    color: rgba(245, 245, 245, 0.667);
+}
+
+
+.sep {
+    display: inline-block;
+    width: 1.5px;
+    height: 1em;
+    background: currentColor;
+    opacity: .5;
+    vertical-align: middle;
+}
+
+.btn-not-found {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 9px 25px;
+    background: linear-gradient(to right, #04d92b 0, #00e4e8 10%, #6af7a266 20%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    border: 1px solid white;
+    border-color: linear-gradient(to right, #04d92b 0, #00e4e8 10%);
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(22, 22, 22, 0.893);
+    backdrop-filter: blur(2px);
+    z-index: 9999;
+}
+
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#h3 {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+#ring {
+    width: 190px;
+    height: 190px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#ring:nth-child(1) {
+    border-bottom: 8px solid #00ffff;
+    animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+    from {
+        transform: rotateX(50deg) rotateZ(110deg);
+    }
+
+    to {
+        transform: rotateX(50deg) rotateZ(470deg);
+    }
+}
+
+#ring:nth-child(2) {
+    border-bottom: 8px solid #04d92b;
+    animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+
+    to {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+}
+
+#ring:nth-child(3) {
+    border-bottom: 8px solid #00ffff;
+    animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+    from {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+
+    to {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+}
+
+#ring:nth-child(4) {
+    border-bottom: 8px solid #04d92b;
+    animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+    from {
+        transform: rotateX(70deg) rotateZ(270deg);
+    }
+
+    to {
+        transform: rotateX(70deg) rotateZ(630deg);
+    }
+}
+
+
+
+@media (max-width: 1536px) {
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 95%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .links a {
+        font-size: 1.2rem;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .text-about {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .what-i-do-main {
+        width: 70%;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    .proyect-card {
+        width: 50%;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .btn-not-found {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 95%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .links a {
+        font-size: 1.2rem;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .text-about {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .what-i-do-main {
+        width: 65%;
+        gap: 13px;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+    }
+
+    .what-i-do-text {
+        font-size: 1rem;
+    }
+
+    .skill-card {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .skill-card-body p {
+        font-size: 0.8rem;
+    }
+
+    .proyect-card {
+        width: 50%;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-container {
+        width: 85%;
+    }
+
+    .barber {
+        gap: 15px;
+    }
+
+    .not-found-title {
+        font-size: 2.5rem;
+    }
+
+    .btn-not-found {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 80px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 95%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .links a {
+        font-size: 1.2rem;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .text-about {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .biography-image {
+        width: 150px;
+        padding: 5px;
+    }
+
+    .biography-text {
+        gap: 1rem;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .what-i-do {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+        gap: 13px;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+    }
+
+    .what-i-do-text,
+    .bio {
+        font-size: 1.2rem;
+    }
+
+    .skill-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .skill-card-body p {
+        font-size: 0.9rem;
+    }
+
+    .technologies-container-icons svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .proyect-card {
+        width: 50%;
+    }
+
+    .title-info {
+        font-size: 2.2rem;
+    }
+
+    .description-proyect {
+        font-size: 1rem;
+    }
+
+    .proyect-detail-text h1 {
+        font-size: 3rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.9rem;
+        letter-spacing: 0;
+        margin-top: 0;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1.2rem;
+    }
+
+    .proyect-detail-info {
+        gap: 4rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-container {
+        width: 85%;
+    }
+
+    .version-title {
+        font-size: 1.5rem;
+    }
+
+    .barber {
+        gap: 15px;
+    }
+
+    .btn-shine {
+        font-size: 15px;
+    }
+
+    .not-found-title {
+        font-size: 1.7rem;
+    }
+
+    .btn-not-found {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 834px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 80px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 95%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .links a {
+        font-size: 0.9rem;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .text-about {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .biography-image {
+        width: 150px;
+        padding: 5px;
+    }
+
+    .biography-text {
+        gap: 1rem;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .biography-networks h2 {
+        margin-left: 15px;
+    }
+
+    .what-i-do {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+        gap: 13px;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .what-i-do-text,
+    .bio {
+        font-size: 1rem;
+    }
+
+    .skill-card {
+        width: 90%;
+        padding: 9px;
+    }
+
+    .skill-card-header {
+        font-size: 1rem;
+    }
+
+    .skill-card-body p {
+        font-size: 0.8rem;
+    }
+
+    .technologies-container-icons svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .proyect-card {
+        width: 60%;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .proyect-card-info {
+        width: 56%;
+        justify-content: space-around;
+    }
+
+    .proyect-card-skills svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .title-info {
+        font-size: 1.7rem;
+    }
+
+    .description-proyect {
+        font-size: 0.9rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0;
+    }
+
+    .proyect-detail-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+        margin-top: 0;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1rem;
+    }
+
+    .proyect-detail-info {
+        gap: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 0rem;
+    }
+
+    .proyect-image img {
+        width: 105%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-container {
+        width: 95%;
+    }
+
+    .version-title {
+        font-size: 1.2rem;
+    }
+
+    .barber {
+        gap: 15px;
+    }
+
+    .btn-shine {
+        font-size: 12px;
+    }
+
+    .notFound-container {
+        padding: 1rem;
+    }
+
+    .not-found-title {
+        gap: .5rem;
+        font-size: 1.7rem;
+    }
+
+    .btn-not-found {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 80px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 95%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .links a {
+        font-size: 0.9rem;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .text-about {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .biography-image {
+        width: 150px;
+        padding: 5px;
+    }
+
+    .biography-text {
+        gap: 1rem;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .biography-networks h2 {
+        margin-left: 13px;
+    }
+
+    .what-i-do {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+        gap: 13px;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .what-i-do-skills .skill-card {
+        /* reemplazá el width: 90% por esto */
+        flex: 0 0 calc(50% - 0.5rem);
+        /* 2 por fila considerando gap: 1rem */
+        width: calc(50% - 0.5rem);
+    }
+
+    .what-i-do-text,
+    .bio {
+        font-size: 1rem;
+    }
+
+    .skill-card {
+        width: 90%;
+        padding: 9px;
+    }
+
+    .skill-card-header {
+        font-size: 1rem;
+    }
+
+    .skill-card-body p {
+        font-size: 0.8rem;
+    }
+
+    .technologies-container-icons svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .proyects-container-cards {
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .proyect-card {
+        width: 60%;
+        justify-content: space-between;
+        padding: 0.8rem;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .proyect-card-info {
+        width: 56%;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .title-info {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .description-proyect {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0;
+    }
+
+    .proyect-detail-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+        margin-top: 0;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1rem;
+    }
+
+    .proyect-detail-info {
+        gap: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 0rem;
+    }
+
+    .proyect-image img {
+        width: 108%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-container {
+        width: 95%;
+    }
+
+    .version-title {
+        font-size: 1.2rem;
+    }
+
+    .barber {
+        gap: 15px;
+    }
+
+    .btn-shine {
+        font-size: 12px;
+    }
+
+    .notFound-container {
+        padding: 1rem;
+    }
+
+    .not-found-title {
+        gap: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-not-found {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 25px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    .links a {
+        font-size: 0.6rem;
+    }
+
+    .links-container ul {
+        gap: 0.8rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .about-container-text {
+        width: 98%;
+    }
+
+    .text-about {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+    }
+
+    .about-container-biography {
+        margin-top: 2.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .biography-image {
+        width: 110px;
+        padding: 3px;
+    }
+
+    .biography-text,
+    .biography-networks {
+        gap: 0.6rem;
+    }
+
+    .biography-networks {
+        margin-top: 46px;
+    }
+
+    .biography-text {
+        width: 100%;
+    }
+
+    .biography-networks {
+        width: 50%;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 .biography-text {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .bio,
+    .what-i-do-text {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+
+    /* “Qué hago” apilado */
+    .what-i-do {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    /* tech grid más angosto */
+
+    .technologies-container {
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    .technologies-container-icons {
+        margin-top: 1.5rem;
+        width: 95%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .technologies-container-icons svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* proyectos: de fila a columna y 100% */
+    .proyects-container {
+        width: 98%;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    .proyects-container-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 3.6rem;
+    }
+
+    .cotizador-online {
+        margin-top: 1rem;
+    }
+
+    .proyect-card {
+        width: 95%;
+    }
+
+    .proyect-card-info {
+        width: 100%;
+    }
+
+    .title-info {
+        font-size: 2.5rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .proyect-card-info-description {
+        width: 95%;
+    }
+
+    .description-proyect {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 2rem;
+    }
+
+    /* detalle de proyecto */
+    .proyect-detail-text h1 {
+        font-size: 2rem;
+    }
+
+    .proyect-detail-container {
+        width: 98%;
+        margin: 0;
+    }
+
+    .proyect-detail-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1.2rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .proyect-detail-problem,
+    .proyect-detail-solution,
+    .proyect-detail-impact {
+        margin-bottom: 1rem;
+    }
+
+    .btn-shine {
+        margin-top: 0.8rem;
+    }
+
+    .repositorio-privado {
+        margin-top: 1rem;
+    }
+
+    .version-title {
+        font-size: 1.8rem;
+    }
+
+    .barber {
+        gap: 1rem;
+    }
+
+    .notFound-container {
+        padding: 1rem;
+    }
+
+    .not-found-title {
+        gap: .5rem;
+        font-size: 1rem;
+    }
+
+    .btn-not-found {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 430px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 25px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    .links a {
+        font-size: 0.5rem;
+    }
+
+    .links-container ul {
+        gap: 0.8rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2rem;
+        margin-left: 0 auto;
+    }
+
+    .about-container-text {
+        width: 98%;
+    }
+
+    .text-about {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+    }
+
+    .about-container-biography {
+        margin-top: 2.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .biography-image {
+        width: 80px;
+        padding: 3px;
+    }
+
+    .biography-text,
+    .biography-networks {
+        gap: 0.6rem;
+    }
+
+    .biography-networks {
+        margin-top: 46px;
+    }
+
+    .biography-text {
+        width: 100%;
+    }
+
+    .biography-networks {
+        width: 50%;
+        margin-top: 61px;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 .biography-text {
+        font-size: 1.1rem;
+        letter-spacing: 0px;
+    }
+
+    .bio,
+    .what-i-do-text {
+        font-size: 0.8rem;
+        line-height: 16px;
+    }
+
+    /* “Qué hago” apilado */
+    .what-i-do {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    /* tech grid más angosto */
+
+    .technologies-container {
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    .technologies-container-icons {
+        margin-top: 1.5rem;
+        width: 95%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .technologies-container-icons svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* proyectos: de fila a columna y 100% */
+    .proyects-container {
+        width: 98%;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    .proyects-container-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 2.5rem;
+    }
+
+    .cotizador-online {
+        margin-top: 1rem;
+    }
+
+    .proyect-card {
+        width: 95%;
+    }
+
+    .proyect-card-info {
+        width: 100%;
+    }
+
+    .title-info {
+        font-size: 1.9rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .proyect-card-info-description {
+        width: 95%;
+    }
+
+    .description-proyect {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0rem;
+    }
+
+    /* detalle de proyecto */
+    .proyect-detail-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .proyect-detail-container {
+        width: 98%;
+        margin: 0;
+    }
+
+    .proyect-detail-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-image img {
+        width: 100%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.9rem;
+        margin-top: 0;
+        line-height: 25px;
+    }
+
+    .proyect-detail-problem,
+    .proyect-detail-solution,
+    .proyect-detail-impact {
+        margin-bottom: 1rem;
+    }
+
+    .btn-shine {
+        margin-top: 0.8rem;
+    }
+
+    .repositorio-privado {
+        margin-top: 1rem;
+    }
+
+    .version-title {
+        font-size: 1.8rem;
+    }
+
+    .barber {
+        gap: 1rem;
+    }
+
+    .barber .btn-shine,
+    .barber p {
+        font-size: 0.7rem;
+    }
+
+    .notFound-container {
+        padding: .5rem;
+    }
+
+    .not-found-title {
+        gap: .3rem;
+        font-size: .7rem;
+    }
+
+    .btn-not-found {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 414px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 25px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    .links a {
+        font-size: 0.5rem;
+    }
+
+    .links-container ul {
+        gap: 0.8rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 2rem;
+        margin-left: 1px;
+    }
+
+    .about-container-text {
+        width: 98%;
+    }
+
+    .text-about {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+    }
+
+    .about-container-biography {
+        margin-top: 2.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .biography-image {
+        width: 80px;
+        padding: 3px;
+    }
+
+    .biography-text,
+    .biography-networks {
+        gap: 0.6rem;
+    }
+
+    .biography-networks {
+        margin-top: 46px;
+    }
+
+    .biography-text {
+        width: 100%;
+    }
+
+    .biography-networks {
+        width: 41%;
+        margin-top: 61px;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 .biography-text {
+        font-size: 1.1rem;
+        letter-spacing: 0px;
+    }
+
+    .bio,
+    .what-i-do-text {
+        font-size: 0.8rem;
+        line-height: 16px;
+    }
+
+    /* “Qué hago” apilado */
+    .what-i-do {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    /* tech grid más angosto */
+
+    .technologies-container {
+        margin-top: 3rem;
+        margin-left: 5px;
+    }
+
+    .technologies-container-icons {
+        margin-top: 1.5rem;
+        width: 78%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .technologies-container-icons svg {
+        width: 25px;
+        height: 25px;
+        margin: 6px;
+    }
+
+    /* proyectos: de fila a columna y 100% */
+    .proyects-container {
+        width: 98%;
+        margin-top: 3rem;
+        margin-left: 1px;
+    }
+
+    .proyects-container-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+
+    .cotizador-online {
+        margin-top: 1rem;
+    }
+
+    .proyect-card {
+        width: 95%;
+    }
+
+    .proyect-card-info {
+        width: 100%;
+    }
+
+    .title-info {
+        font-size: 1.5rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .proyect-card-info-description {
+        width: 100%;
+    }
+
+    .description-proyect {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0rem;
+    }
+
+    /* detalle de proyecto */
+    .proyect-detail-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .proyect-detail-container {
+        width: 98%;
+        margin: 0;
+    }
+
+    .proyect-detail-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-image img {
+        width: 100%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.9rem;
+        margin-top: 0;
+        line-height: 25px;
+    }
+
+    .proyect-detail-problem,
+    .proyect-detail-solution,
+    .proyect-detail-impact {
+        margin-bottom: 1rem;
+    }
+
+    .btn-shine {
+        margin-top: 0.8rem;
+    }
+
+    .repositorio-privado {
+        margin-top: 1rem;
+    }
+
+    .version-title {
+        font-size: 1.5rem;
+    }
+
+    .barber {
+        gap: 1rem;
+    }
+
+    .barber .btn-shine,
+    .barber p {
+        font-size: 0.7rem;
+    }
+
+    .text-footer-container {
+        padding: 0.3rem;
+    }
+
+    .text-footer-container h3 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 390px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 25px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 0.6rem;
+    }
+
+    .links a {
+        font-size: 0.5rem;
+    }
+
+    .links-container ul {
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 1rem;
+        margin-left: 1px;
+    }
+
+    .about-container-text {
+        width: 98%;
+    }
+
+    .text-about {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+    }
+
+    .about-container-biography {
+        margin-top: 2.55rem;
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .biography-image {
+        width: 80px;
+        padding: 3px;
+    }
+
+    .biography-text,
+    .biography-networks {
+        gap: 0.6rem;
+    }
+
+    .biography-networks {
+        margin-top: 46px;
+    }
+
+    .biography-text {
+        width: 100%;
+    }
+
+    .biography-networks {
+        width: 41%;
+        margin-top: 64px;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 .biography-text {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
+
+    .social-icon-2,
+    .social-icon-2-2,
+    .social-icon-3,
+    .social-icon-3-3,
+    .social-icon-4,
+    .social-icon-4-4 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bio,
+    .what-i-do-text {
+        font-size: 0.8rem;
+        line-height: 16px;
+    }
+
+    /* “Qué hago” apilado */
+    .what-i-do {
+        margin-top: 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+    }
+
+    .skill-card-header {
+        font-size: 0.9rem;
+    }
+
+    .card-icon>.bi {
+        font-size: 1.1rem;
+    }
+
+    .skill-card-body p {
+        font-size: 0.7rem;
+    }
+
+    /* tech grid más angosto */
+
+    .technologies-container {
+        margin-top: 2rem;
+        margin-left: 5px;
+    }
+
+    .technologies-container-icons {
+        margin-top: 1.5rem;
+        width: 97%;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .technologies-container-icons svg {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+
+    /* proyectos: de fila a columna y 100% */
+    .proyects-container {
+        width: 98%;
+        margin-top: 3rem;
+        margin-left: 1px;
+    }
+
+    .proyects-container-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+
+    .cotizador-online {
+        margin-top: 1rem;
+    }
+
+    .proyect-card {
+        width: 95%;
+    }
+
+    .proyect-card-info {
+        width: 100%;
+    }
+
+    .title-info {
+        font-size: 1.5rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .proyect-card-info-description {
+        width: 100%;
+    }
+
+    .description-proyect {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0rem;
+    }
+
+    /* detalle de proyecto */
+    .proyect-detail-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .proyect-detail-container {
+        width: 98%;
+        margin: 0;
+    }
+
+    .proyect-detail-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-image img {
+        width: 100%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.8rem;
+        margin-top: 0;
+        line-height: 20px;
+    }
+
+    .proyect-detail-problem,
+    .proyect-detail-solution,
+    .proyect-detail-impact {
+        margin-bottom: 1rem;
+    }
+
+    .btn-shine {
+        margin-top: 0.8rem;
+        font-size: 10px;
+    }
+
+    .repositorio-privado {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .version-title {
+        font-size: 1.5rem;
+    }
+
+    .barber {
+        gap: 0.9rem;
+    }
+
+    .barber .btn-shine,
+    .barber p {
+        font-size: 0.7rem;
+    }
+
+    .text-footer-container {
+        padding: 0.3rem;
+    }
+
+    .text-footer-container h3 {
+        font-size: 0.8rem;
+    }
+
+    .socialcontainer:hover .social-icon-2 {
+        transform: translateY(-60px);
+    }
+
+    .socialcontainer:hover .social-icon-3 {
+        transform: translateY(-60px);
+    }
+
+    .socialcontainer:hover .social-icon-4 {
+        transform: translateY(-60px);
+    }
+
+    .notFound-container {
+        padding: .2rem;
+    }
+
+    .not-found-title {
+        gap: .3rem;
+        font-size: .5rem;
+    }
+
+    .btn-not-found {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    section[id] {
+        scroll-margin-top: calc(var(--nav-h) + 25px);
+        /* pequeño respiro */
+    }
+
+    /* ya tenés esto */
+    .contenedor-app {
+        width: 100%;
+        margin-left: 0 auto;
+    }
+
+    .navbar-container {
+        width: 98%;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 0.6rem;
+    }
+
+    .links a {
+        font-size: 0.5rem;
+    }
+
+    .links-container ul {
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* apilar la bio y liberar anchos */
+    .about-container {
+        margin-top: 1rem;
+        margin-left: 1px;
+    }
+
+    .about-container-text {
+        width: 98%;
+    }
+
+    .text-about {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+    }
+
+    .about-container-biography {
+        margin-top: 2.55rem;
+        flex-direction: column;
+        gap: 2rem;
+        width: 98%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .biography-image {
+        width: 80px;
+        padding: 3px;
+    }
+
+    .biography-text,
+    .biography-networks {
+        gap: 0.6rem;
+    }
+
+    .biography-networks {
+        margin-top: 46px;
+    }
+
+    .biography-text {
+        width: 100%;
+    }
+
+    .biography-networks {
+        width: 41%;
+        margin-top: 64px;
+    }
+
+    .biography-text h2,
+    .biography-networks h2,
+    .what-i-do h2,
+    .technologies-container-text h2,
+    .proyect-container-text h2 .biography-text {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
+
+    .social-icon-2,
+    .social-icon-2-2,
+    .social-icon-3,
+    .social-icon-3-3,
+    .social-icon-4,
+    .social-icon-4-4 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bio,
+    .what-i-do-text {
+        font-size: 0.7rem;
+        line-height: 14px;
+    }
+
+    /* “Qué hago” apilado */
+    .what-i-do {
+        margin-top: 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .what-i-do-main {
+        width: 100%;
+    }
+
+    .what-i-do-skills {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+    }
+
+    .skill-card-header {
+        font-size: 0.9rem;
+    }
+
+    .card-icon>.bi {
+        font-size: 1.1rem;
+    }
+
+    .skill-card-body p {
+        font-size: 0.7rem;
+    }
+
+    /* tech grid más angosto */
+
+    .technologies-container {
+        margin-top: 2rem;
+        margin-left: 5px;
+    }
+
+    .technologies-container-icons {
+        margin-top: 1.5rem;
+        width: 97%;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .technologies-container-icons svg {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+
+    /* proyectos: de fila a columna y 100% */
+    .proyects-container {
+        width: 98%;
+        margin-top: 3rem;
+        margin-left: 1px;
+    }
+
+    .proyects-container-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+
+    .cotizador-online {
+        margin-top: 1rem;
+    }
+
+    .proyect-card {
+        width: 95%;
+    }
+
+    .proyect-card-info {
+        width: 100%;
+    }
+
+    .title-info {
+        font-size: 1.5rem;
+    }
+
+    .proyect-card-skills svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .proyect-card-info-description {
+        width: 100%;
+    }
+
+    .description-proyect {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .proyect-card-button {
+        margin-top: 0rem;
+    }
+
+    /* detalle de proyecto */
+    .proyect-detail-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .proyect-detail-container {
+        width: 98%;
+        margin: 0;
+    }
+
+    .proyect-detail-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .proyect-image {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .proyect-image img {
+        width: 100%;
+    }
+
+    .proyect-detail-info-problem-impact-solution {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .proyect-detail-problem-title h2,
+    .proyect-detail-solution-title h2,
+    .proyect-detail-impact-title h2 {
+        font-size: 1rem;
+    }
+
+    .proyect-detail-info-problem-impact-solution li {
+        font-size: 0.8rem;
+        margin-top: 0;
+        line-height: 20px;
+    }
+
+    .proyect-detail-problem,
+    .proyect-detail-solution,
+    .proyect-detail-impact {
+        margin-bottom: 1rem;
+    }
+
+    .btn-shine {
+        margin-top: 0.8rem;
+        font-size: 12px;
+    }
+
+    .repositorio-privado {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .version-title {
+        font-size: 1.5rem;
+    }
+
+    .barber {
+        gap: 0.9rem;
+    }
+
+    .barber .btn-shine,
+    .barber p {
+        font-size: 0.6rem;
+    }
+
+    .barber .btn-shine {
+        padding: 7px 12px;
+    }
+
+    .text-footer-container {
+        padding: 0.3rem;
+    }
+
+    .text-footer-container h3 {
+        font-size: 0.8rem;
+    }
+
+    .socialcontainer:hover .social-icon-2 {
+        transform: translateY(-60px);
+    }
+
+    .socialcontainer:hover .social-icon-3 {
+        transform: translateY(-60px);
+    }
+
+    .socialcontainer:hover .social-icon-4 {
+        transform: translateY(-60px);
+    }
+}
